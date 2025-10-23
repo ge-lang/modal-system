@@ -1,0 +1,113 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Modal System</title>
+    <link rel="stylesheet" href="style.css" />
+
+</head>
+<body>
+    <div class="container">
+        <h1>Advanced Modal System</h1>
+        
+        <div class="button-grid">
+            <button class="trigger-btn" data-modal="default">Default Modal</button>
+            <button class="trigger-btn" data-modal="success">Success Modal</button>
+            <button class="trigger-btn" data-modal="warning">Warning Modal</button>
+            <button class="trigger-btn" data-modal="error">Error Modal</button>
+            <button class="trigger-btn" data-modal="auto-close">Auto-close Modal</button>
+            <button class="trigger-btn" id="timedModal">Timed Modal (3s)</button>
+        </div>
+
+        <p style="color: white; font-size: 18px;">Click buttons above to see different modal types</p>
+    </div>
+
+    <!-- Default Modal -->
+    <div class="modal-overlay" id="defaultModal">
+        <div class="modal">
+            <div class="modal-header">
+                <h2>Default Modal</h2>
+                <button class="close-btn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>This is a default modal window. You can put any content here - forms, images, text, etc.</p>
+                <p>Modal will close when you click outside, press ESC, or click the close button.</p>
+            </div>
+            <div class="modal-footer">
+                <button class="action-btn cancel-btn">Cancel</button>
+                <button class="action-btn confirm-btn">Confirm</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div class="modal-overlay" id="successModal">
+        <div class="modal success">
+            <div class="modal-header">
+                <h2>✅ Success!</h2>
+                <button class="close-btn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>Your operation has been completed successfully!</p>
+                <p>All changes have been saved and applied.</p>
+            </div>
+            <div class="modal-footer">
+                <button class="action-btn confirm-btn">Continue</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Warning Modal -->
+    <div class="modal-overlay" id="warningModal">
+        <div class="modal warning">
+            <div class="modal-header">
+                <h2>⚠️ Warning</h2>
+                <button class="close-btn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>This action cannot be undone. Are you sure you want to proceed?</p>
+                <p>All data will be permanently deleted.</p>
+            </div>
+            <div class="modal-footer">
+                <button class="action-btn cancel-btn">Cancel</button>
+                <button class="action-btn confirm-btn">Delete Anyway</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Error Modal -->
+    <div class="modal-overlay" id="errorModal">
+        <div class="modal error">
+            <div class="modal-header">
+                <h2>❌ Error</h2>
+                <button class="close-btn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>An error occurred while processing your request.</p>
+                <p>Please try again later or contact support if the problem persists.</p>
+            </div>
+            <div class="modal-footer">
+                <button class="action-btn cancel-btn">Close</button>
+                <button class="action-btn confirm-btn">Retry</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Auto-close Modal -->
+    <div class="modal-overlay" id="autoCloseModal">
+        <div class="modal auto-close">
+            <div class="timer-bar"></div>
+            <div class="modal-header">
+                <h2>⏰ Auto-close</h2>
+                <button class="close-btn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>This modal will close automatically in 3 seconds...</p>
+            </div>
+        </div>
+    </div>
+
+    <script defer src="index.js"></script>
+  </body>
+
+
